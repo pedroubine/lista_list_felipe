@@ -7,7 +7,10 @@ List::List()
 {
     count = 0;
 }
-
+int List::Get(int i)
+{
+    return Entry[i];
+}
 bool List::Full()
 {
     return count == MaxList ? true : false;

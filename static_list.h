@@ -13,6 +13,7 @@ class List
         bool Empty();
         void Clear();
         int Size();
+        int Get(int i);
         void Retrive(int p, int &x);
         void Replace(int p, int x);
 

@@ -15,7 +15,7 @@ class oList
         bool Full();
         bool Empty();
         void Clear();
-        bool Size();
+        int Size();
         int Gett(int i);
         void Retrive(int p, int &x);
         void Replace(int p, int x);

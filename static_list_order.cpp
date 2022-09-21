@@ -66,7 +66,7 @@ void oList::Insert(int x)
 }
 int oList::Gett(int i)
 {
-
+    return Entry[i];
 }
 void oList::Delete(int p, int &x)
 {
@@ -97,7 +97,7 @@ void oList::Clear()
     count = 0;
 }
 
-bool oList::Size()
+int oList::Size()
 {
     return count;    
 }

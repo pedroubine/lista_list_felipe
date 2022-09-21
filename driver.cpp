@@ -63,15 +63,46 @@ void ex5(oList l1, oList l2)
 {
     oList tmp;
     int i = 1;
-    for(int i = 1;i <= l1.Size();i++)
+    int size1 = l1.Size(), size2 = l2.Size();
+    for(int i = 1;i <= size1;i++)
     {
         tmp.Insert(l1.Gett(i));
     }
-    for(int i = 1;i <= l2.Size();i++)
+    for(int i = 1;i <= size2;i++)
     {
         tmp.Insert(l2.Gett(i));
     }
 }
+
+void ex6(List l1)
+{
+    int first = l1.Get(1);
+    int size = l1.Size();
+    oList left,right;
+    for(int i = 2; i<=l1.Size();i++)
+    {
+        if(l1.Get(i) < first)
+        {
+            left.Insert(l1.Get(i));
+        }
+        else 
+        {
+            right.Insert(l1.Get(i));
+        }
+    }
+    l1.Clear();
+    for(int i = 1;i <=left.Size();i++)    
+    {
+        l1.Insert(i,left.Gett(i));
+    }
+    l1.Insert(left.Size()+1,first);
+
+    for(int i = left.Size()+2;i <=right.Size()+1+left.Size();i++) 
+    {
+        l1.Insert(i,right.Gett(i-2));
+    }
+}
+
 
 
 int main()
@@ -96,5 +127,7 @@ int main()
     l2.Insert(2);
     l2.Insert(5);
     ex5(l1,l2);
+
+    ex6(teste);
     return 0;
 }
